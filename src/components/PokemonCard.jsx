@@ -1,22 +1,14 @@
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
-
-function PokemonCard() {
-  let pokemon = pokemonList[0];
+/* eslint-disable react/prop-types */
+function PokemonCard({ pokemon }) {
+  console.log({ pokemon });
+  // let pokemon = pokemonList[0];
+  // const pokemon = { name: "bulbasaur" };
   return (
     <>
       <figure>
-        {pokemon.imgSrc ? (
+        {pokemon[0].imgSrc ? (
           <img
-            src={pokemon.imgSrc}
+            src={pokemon[0].imgSrc}
             alt="bulbazaur"
             className="avatar"
             style={{
@@ -32,7 +24,7 @@ function PokemonCard() {
           <p>?????</p>
         )}
 
-        <figcaption>{pokemon.name}</figcaption>
+        <figcaption>{pokemon[0].name}</figcaption>
       </figure>
     </>
   );
