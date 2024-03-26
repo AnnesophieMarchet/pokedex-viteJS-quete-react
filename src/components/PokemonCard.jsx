@@ -1,15 +1,15 @@
 import PropTypes from "prop-types";
 
 function PokemonCard({ pokemon }) {
-  console.log({ pokemon });
+  // console.log({ pokemon });
   // let pokemon = pokemonList[0];
   // const pokemon = { name: "bulbasaur" };
   return (
     <>
       <figure>
-        {pokemon[0].imgSrc ? (
+        {pokemon.imgSrc ? (
           <img
-            src={pokemon[0].imgSrc}
+            src={pokemon.imgSrc}
             alt="bulbazaur"
             className="avatar"
             style={{
@@ -25,7 +25,7 @@ function PokemonCard({ pokemon }) {
           <p>?????</p>
         )}
 
-        <figcaption>{pokemon[0].name}</figcaption>
+        <figcaption>{pokemon.name}</figcaption>
       </figure>
     </>
   );
