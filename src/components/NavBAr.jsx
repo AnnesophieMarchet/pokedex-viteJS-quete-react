@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 function NavBAr({ pokemonSetIndex, pokemonList }) {
   const handleChange = (index) => {
     pokemonSetIndex(index);
+    console.log(pokemonList[index].name);
+    if (pokemonList[index].name === "pikachu") {
+      alert("pika pikachu !!!");
+    }
   };
   return (
     <>
