@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 /* eslint-disable react/prop-types */
 function NavBAr({ pokemonSetIndex, pokemonList }) {
   const handleChange = (index) => {
@@ -13,5 +14,12 @@ function NavBAr({ pokemonSetIndex, pokemonList }) {
     </>
   );
 }
+NavBAr.propTypes = {
+  pokemonSetIndex: PropTypes.func.isRequired,
+  pokemonList: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
+  }).isRequired,
+};
 
 export default NavBAr;

@@ -31,7 +31,7 @@ const pokemonList = [
 
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-  console.log({ pokemonIndex });
+  console.log({ setPokemonIndex });
 
   console.log({ pokemonList });
   return (
