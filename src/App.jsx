@@ -48,8 +48,23 @@ function App() {
     <>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
 
-      <button onClick={handleClickPrecedent}>présédent</button>
-      <button onClick={handleClickSuivant}>suivant</button>
+      <button
+        onClick={handleClickPrecedent}
+        style={{
+          display: pokemonIndex === 0 ? "none" : "inline-block",
+        }}
+      >
+        présédent
+      </button>
+      <button
+        onClick={handleClickSuivant}
+        style={{
+          display:
+            pokemonIndex === pokemonList.length - 1 ? "none" : "inline-block",
+        }}
+      >
+        suivant
+      </button>
     </>
   );
 }
