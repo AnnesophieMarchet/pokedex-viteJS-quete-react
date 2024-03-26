@@ -1,29 +1,15 @@
 /* eslint-disable react/prop-types */
-function NavBAr({
-  handleClickPrecedent,
-  handleClickSuivant,
-  pokemonIndex,
-  pokemonList,
-}) {
+function NavBAr({ pokemonSetIndex, pokemonList }) {
+  const handleChange = (index) => {
+    pokemonSetIndex(index);
+  };
   return (
     <>
-      <button
-        onClick={handleClickPrecedent}
-        style={{
-          display: pokemonIndex === 0 ? "none" : "inline-block",
-        }}
-      >
-        présédent
-      </button>
-      <button
-        onClick={handleClickSuivant}
-        style={{
-          display:
-            pokemonIndex === pokemonList.length - 1 ? "none" : "inline-block",
-        }}
-      >
-        suivant
-      </button>
+      {pokemonList.map((pokemon, index) => (
+        <button onClick={() => handleChange(index)} key={pokemon.name}>
+          {pokemon.name}
+        </button>
+      ))}
     </>
   );
 }

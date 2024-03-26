@@ -10,7 +10,7 @@ function PokemonCard({ pokemon }) {
         {pokemon.imgSrc ? (
           <img
             src={pokemon.imgSrc}
-            alt="bulbazaur"
+            alt={pokemon.name}
             className="avatar"
             style={{
               width: "100%",
